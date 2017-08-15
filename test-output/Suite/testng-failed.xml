@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <test name="FirefoxTest(failed)" parallel="tests">
+    <parameter name="browser" value="firefox"/>
+    <parameter name="letterType" value="formal"/>
+    <classes>
+      <class name="com.epam.pavel_loginov.patterns.tests.TestClass">
+        <methods>
+          <include name="isLetterSent"/>
+          <include name="draftTest"/>
+          <include name="contentTest"/>
+          <include name="setUp"/>
+          <include name="sendLetterTest"/>
+          <include name="testLogin"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.epam.pavel_loginov.patterns.tests.TestClass -->
+    </classes>
+  </test> <!-- FirefoxTest(failed) -->
+</suite> <!-- Failed suite [Suite] -->

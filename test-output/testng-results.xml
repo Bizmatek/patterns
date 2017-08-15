@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="10" passed="10">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="70312" started-at="2017-08-15T13:19:58Z" finished-at="2017-08-15T13:21:09Z">
+    <groups>
+      <group name="actionsWithLetters">
+        <method signature="TestClass.draftTest()[pri:0, instance:com.epam.pavel_loginov.patterns.tests.TestClass@100fc185]" name="draftTest" class="com.epam.pavel_loginov.patterns.tests.TestClass"/>
+        <method signature="TestClass.contentTest()[pri:0, instance:com.epam.pavel_loginov.patterns.tests.TestClass@100fc185]" name="contentTest" class="com.epam.pavel_loginov.patterns.tests.TestClass"/>
+        <method signature="TestClass.sendLetterTest()[pri:0, instance:com.epam.pavel_loginov.patterns.tests.TestClass@100fc185]" name="sendLetterTest" class="com.epam.pavel_loginov.patterns.tests.TestClass"/>
+        <method signature="TestClass.draftTest()[pri:0, instance:com.epam.pavel_loginov.patterns.tests.TestClass@39aeed2f]" name="draftTest" class="com.epam.pavel_loginov.patterns.tests.TestClass"/>
+        <method signature="TestClass.contentTest()[pri:0, instance:com.epam.pavel_loginov.patterns.tests.TestClass@39aeed2f]" name="contentTest" class="com.epam.pavel_loginov.patterns.tests.TestClass"/>
+        <method signature="TestClass.sendLetterTest()[pri:0, instance:com.epam.pavel_loginov.patterns.tests.TestClass@39aeed2f]" name="sendLetterTest" class="com.epam.pavel_loginov.patterns.tests.TestClass"/>
+      </group> <!-- actionsWithLetters -->
+    </groups>
+    <test name="ChromeTest" duration-ms="27219" started-at="2017-08-15T13:19:58Z" finished-at="2017-08-15T13:20:26Z">
+      <class name="com.epam.pavel_loginov.patterns.tests.TestClass">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.epam.pavel_loginov.patterns.tests.TestClass@100fc185]" name="setUp" is-config="true" duration-ms="3573" started-at="2017-08-15T16:19:58Z" description="start browser" finished-at="2017-08-15T16:20:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testLogin()[pri:0, instance:com.epam.pavel_loginov.patterns.tests.TestClass@100fc185]" name="testLogin" duration-ms="6010" started-at="2017-08-15T16:20:02Z" finished-at="2017-08-15T16:20:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogin -->
+        <test-method status="PASS" signature="createLetter(java.lang.String)[pri:0, instance:com.epam.pavel_loginov.patterns.tests.TestClass@100fc185]" name="createLetter" is-config="true" duration-ms="1" started-at="2017-08-15T16:20:08Z" finished-at="2017-08-15T16:20:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[informal]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createLetter -->
+        <test-method status="PASS" signature="draftTest()[pri:0, instance:com.epam.pavel_loginov.patterns.tests.TestClass@100fc185]" name="draftTest" duration-ms="6487" started-at="2017-08-15T16:20:08Z" depends-on-methods="com.epam.pavel_loginov.patterns.tests.TestClass.testLogin" finished-at="2017-08-15T16:20:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- draftTest -->
+        <test-method status="PASS" signature="contentTest()[pri:0, instance:com.epam.pavel_loginov.patterns.tests.TestClass@100fc185]" name="contentTest" duration-ms="1672" started-at="2017-08-15T16:20:14Z" depends-on-methods="com.epam.pavel_loginov.patterns.tests.TestClass.draftTest" finished-at="2017-08-15T16:20:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- contentTest -->
+        <test-method status="PASS" signature="sendLetterTest()[pri:0, instance:com.epam.pavel_loginov.patterns.tests.TestClass@100fc185]" name="sendLetterTest" duration-ms="3210" started-at="2017-08-15T16:20:16Z" depends-on-methods="com.epam.pavel_loginov.patterns.tests.TestClass.contentTest" finished-at="2017-08-15T16:20:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sendLetterTest -->
+        <test-method status="PASS" signature="isLetterSent()[pri:0, instance:com.epam.pavel_loginov.patterns.tests.TestClass@100fc185]" name="isLetterSent" duration-ms="2749" started-at="2017-08-15T16:20:19Z" depends-on-methods="com.epam.pavel_loginov.patterns.tests.TestClass.sendLetterTest" finished-at="2017-08-15T16:20:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isLetterSent -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.epam.pavel_loginov.patterns.tests.TestClass@100fc185]" name="tearDown" is-config="true" duration-ms="3486" started-at="2017-08-15T16:20:22Z" finished-at="2017-08-15T16:20:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.epam.pavel_loginov.patterns.tests.TestClass -->
+    </test> <!-- ChromeTest -->
+    <test name="FirefoxTest" duration-ms="43049" started-at="2017-08-15T13:20:26Z" finished-at="2017-08-15T13:21:09Z">
+      <class name="com.epam.pavel_loginov.patterns.tests.TestClass">
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.epam.pavel_loginov.patterns.tests.TestClass@39aeed2f]" name="setUp" is-config="true" duration-ms="4998" started-at="2017-08-15T16:20:26Z" description="start browser" finished-at="2017-08-15T16:20:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testLogin()[pri:0, instance:com.epam.pavel_loginov.patterns.tests.TestClass@39aeed2f]" name="testLogin" duration-ms="8042" started-at="2017-08-15T16:20:31Z" finished-at="2017-08-15T16:20:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogin -->
+        <test-method status="PASS" signature="createLetter(java.lang.String)[pri:0, instance:com.epam.pavel_loginov.patterns.tests.TestClass@39aeed2f]" name="createLetter" is-config="true" duration-ms="1" started-at="2017-08-15T16:20:39Z" finished-at="2017-08-15T16:20:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[formal]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createLetter -->
+        <test-method status="PASS" signature="draftTest()[pri:0, instance:com.epam.pavel_loginov.patterns.tests.TestClass@39aeed2f]" name="draftTest" duration-ms="10286" started-at="2017-08-15T16:20:39Z" depends-on-methods="com.epam.pavel_loginov.patterns.tests.TestClass.testLogin" finished-at="2017-08-15T16:20:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- draftTest -->
+        <test-method status="PASS" signature="contentTest()[pri:0, instance:com.epam.pavel_loginov.patterns.tests.TestClass@39aeed2f]" name="contentTest" duration-ms="3161" started-at="2017-08-15T16:20:49Z" depends-on-methods="com.epam.pavel_loginov.patterns.tests.TestClass.draftTest" finished-at="2017-08-15T16:20:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- contentTest -->
+        <test-method status="PASS" signature="sendLetterTest()[pri:0, instance:com.epam.pavel_loginov.patterns.tests.TestClass@39aeed2f]" name="sendLetterTest" duration-ms="7271" started-at="2017-08-15T16:20:52Z" depends-on-methods="com.epam.pavel_loginov.patterns.tests.TestClass.contentTest" finished-at="2017-08-15T16:20:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sendLetterTest -->
+        <test-method status="PASS" signature="isLetterSent()[pri:0, instance:com.epam.pavel_loginov.patterns.tests.TestClass@39aeed2f]" name="isLetterSent" duration-ms="5475" started-at="2017-08-15T16:20:59Z" depends-on-methods="com.epam.pavel_loginov.patterns.tests.TestClass.sendLetterTest" finished-at="2017-08-15T16:21:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- isLetterSent -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.epam.pavel_loginov.patterns.tests.TestClass@39aeed2f]" name="tearDown" is-config="true" duration-ms="3809" started-at="2017-08-15T16:21:05Z" finished-at="2017-08-15T16:21:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.epam.pavel_loginov.patterns.tests.TestClass -->
+    </test> <!-- FirefoxTest -->
+  </suite> <!-- Suite -->
+</testng-results>
