@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-Suite">
-              <span class="suite-name border-passed">Suite</span>
+              <span class="suite-name border-failed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,7 +91,50 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">10 methods,   10 passed</span>
+                    <span class="method-stats">10 methods, 1 failed,  4 skipped,  5 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.epam.pavel_loginov.patterns.tests.TestClass" hash-for-method="testLogin">testLogin</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
+                    </span>
+                    <div class="method-list-content skipped suite-Suite">
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.epam.pavel_loginov.patterns.tests.TestClass" hash-for-method="contentTest">contentTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.epam.pavel_loginov.patterns.tests.TestClass" hash-for-method="draftTest">draftTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.epam.pavel_loginov.patterns.tests.TestClass" hash-for-method="isLetterSent">isLetterSent</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.epam.pavel_loginov.patterns.tests.TestClass" hash-for-method="sendLetterTest">sendLetterTest</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Suite -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -107,16 +150,6 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.epam.pavel_loginov.patterns.tests.TestClass" hash-for-method="contentTest">contentTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.epam.pavel_loginov.patterns.tests.TestClass" hash-for-method="draftTest">draftTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.epam.pavel_loginov.patterns.tests.TestClass" hash-for-method="draftTest">draftTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
@@ -127,22 +160,7 @@
                       <br/>
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.epam.pavel_loginov.patterns.tests.TestClass" hash-for-method="isLetterSent">isLetterSent</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.epam.pavel_loginov.patterns.tests.TestClass" hash-for-method="sendLetterTest">sendLetterTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.epam.pavel_loginov.patterns.tests.TestClass" hash-for-method="sendLetterTest">sendLetterTest</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.epam.pavel_loginov.patterns.tests.TestClass" hash-for-method="testLogin">testLogin</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -162,6 +180,127 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">com.epam.pavel_loginov.patterns.tests.TestClass</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testLogin">
+                  </a> <!-- testLogin -->
+                  <span class="method-name">testLogin</span>
+                  <div class="stack-trace">org.openqa.selenium.WebDriverException: Error communicating with the remote browser. It may have died.
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1&apos;, time: &apos;2016-06-30 17:37:03&apos;
+System info: host: &apos;EPRURYAW0052&apos;, ip: &apos;10.19.13.122&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: driver.version: EventFiringWebDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 41ef9677-2a93-46ef-b276-d9eac2b6357d
+Command duration or timeout: 4.95 seconds
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1&apos;, time: &apos;2016-06-30 17:32:46&apos;
+System info: host: &apos;EPRURYAW0052&apos;, ip: &apos;10.19.13.122&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webdriver.remote.sessionid=9f368700-1207-4e19-bc90-19bbce726df6, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 9f368700-1207-4e19-bc90-19bbce726df6
+*** Element info: {Using=id, value=PH_user-email}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:413)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+	at com.epam.pavel_loginov.patterns.patterns.decorator.Decorator.findElement(Decorator.java:25)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:899)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$0(ExpectedConditions.java:897)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:1)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:238)
+	at com.epam.pavel_loginov.patterns.tests.TestClass.testLogin(TestClass.java:65)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.openqa.selenium.remote.UnreachableBrowserException: Error communicating with the remote browser. It may have died.
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1&apos;, time: &apos;2016-06-30 17:37:03&apos;
+System info: host: &apos;EPRURYAW0052&apos;, ip: &apos;10.19.13.122&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: driver.version: EventFiringWebDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=45.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 41ef9677-2a93-46ef-b276-d9eac2b6357d
+Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1&apos;, time: &apos;2016-06-30 17:32:46&apos;
+System info: host: &apos;EPRURYAW0052&apos;, ip: &apos;10.19.13.122&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_112&apos;
+Driver info: driver.version: unknown
+... Removed 20 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">com.epam.pavel_loginov.patterns.tests.TestClass</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="contentTest">
+                  </a> <!-- contentTest -->
+                  <span class="method-name">contentTest</span>
+                  <div class="stack-trace">java.lang.Throwable: Method TestClass.contentTest()[pri:0, instance:com.epam.pavel_loginov.patterns.tests.TestClass@39aeed2f] depends on not successfully finished methods
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+... Removed 9 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="draftTest">
+                  </a> <!-- draftTest -->
+                  <span class="method-name">draftTest</span>
+                  <div class="stack-trace">java.lang.Throwable: Method TestClass.draftTest()[pri:0, instance:com.epam.pavel_loginov.patterns.tests.TestClass@39aeed2f] depends on not successfully finished methods
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+... Removed 9 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="isLetterSent">
+                  </a> <!-- isLetterSent -->
+                  <span class="method-name">isLetterSent</span>
+                  <div class="stack-trace">java.lang.Throwable: Method TestClass.isLetterSent()[pri:0, instance:com.epam.pavel_loginov.patterns.tests.TestClass@39aeed2f] depends on not successfully finished methods
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+... Removed 9 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="sendLetterTest">
+                  </a> <!-- sendLetterTest -->
+                  <span class="method-name">sendLetterTest</span>
+                  <div class="stack-trace">java.lang.Throwable: Method TestClass.sendLetterTest()[pri:0, instance:com.epam.pavel_loginov.patterns.tests.TestClass@39aeed2f] depends on not successfully finished methods
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+... Removed 9 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-skipped -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -177,20 +316,6 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="contentTest">
-                  </a> <!-- contentTest -->
-                  <span class="method-name">contentTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="draftTest">
-                  </a> <!-- draftTest -->
-                  <span class="method-name">draftTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="draftTest">
                   </a> <!-- draftTest -->
                   <span class="method-name">draftTest</span>
@@ -205,30 +330,9 @@
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="isLetterSent">
-                  </a> <!-- isLetterSent -->
-                  <span class="method-name">isLetterSent</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
                   <a name="sendLetterTest">
                   </a> <!-- sendLetterTest -->
                   <span class="method-name">sendLetterTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="sendLetterTest">
-                  </a> <!-- sendLetterTest -->
-                  <span class="method-name">sendLetterTest</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testLogin">
-                  </a> <!-- testLogin -->
-                  <span class="method-name">testLogin</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -322,50 +426,50 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(10);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'draftTest')
+data.setCell(0, 1, 'testLogin')
 data.setCell(0, 2, 'com.epam.pavel_loginov.patterns.tests.TestClass')
-data.setCell(0, 3, 10286);
+data.setCell(0, 3, 8623);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'testLogin')
 data.setCell(1, 2, 'com.epam.pavel_loginov.patterns.tests.TestClass')
-data.setCell(1, 3, 8042);
+data.setCell(1, 3, 6648);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'sendLetterTest')
+data.setCell(2, 1, 'draftTest')
 data.setCell(2, 2, 'com.epam.pavel_loginov.patterns.tests.TestClass')
-data.setCell(2, 3, 7271);
+data.setCell(2, 3, 6349);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'draftTest')
+data.setCell(3, 1, 'sendLetterTest')
 data.setCell(3, 2, 'com.epam.pavel_loginov.patterns.tests.TestClass')
-data.setCell(3, 3, 6487);
+data.setCell(3, 3, 3440);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'testLogin')
+data.setCell(4, 1, 'isLetterSent')
 data.setCell(4, 2, 'com.epam.pavel_loginov.patterns.tests.TestClass')
-data.setCell(4, 3, 6010);
+data.setCell(4, 3, 2560);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'isLetterSent')
+data.setCell(5, 1, 'contentTest')
 data.setCell(5, 2, 'com.epam.pavel_loginov.patterns.tests.TestClass')
-data.setCell(5, 3, 5475);
+data.setCell(5, 3, 2021);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'sendLetterTest')
+data.setCell(6, 1, 'isLetterSent')
 data.setCell(6, 2, 'com.epam.pavel_loginov.patterns.tests.TestClass')
-data.setCell(6, 3, 3210);
+data.setCell(6, 3, 0);
 data.setCell(7, 0, 7)
 data.setCell(7, 1, 'contentTest')
 data.setCell(7, 2, 'com.epam.pavel_loginov.patterns.tests.TestClass')
-data.setCell(7, 3, 3161);
+data.setCell(7, 3, 0);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'isLetterSent')
+data.setCell(8, 1, 'draftTest')
 data.setCell(8, 2, 'com.epam.pavel_loginov.patterns.tests.TestClass')
-data.setCell(8, 3, 2749);
+data.setCell(8, 3, 0);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'contentTest')
+data.setCell(9, 1, 'sendLetterTest')
 data.setCell(9, 2, 'com.epam.pavel_loginov.patterns.tests.TestClass')
-data.setCell(9, 3, 1672);
+data.setCell(9, 3, 0);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 54 seconds</span>
+              <span class="suite-total-time">Total running time: 29 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -398,63 +502,47 @@ return data;
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <span class="method-name">testLogin</span>
-                <span class="method-start">3587 ms</span>
+                <span class="method-start">3990 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">createLetter(informal)</span>
-                <span class="method-start">9600 ms</span>
+                <span class="method-start">10641 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">draftTest</span>
-                <span class="method-start">9601 ms</span>
+                <span class="method-start">10642 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">contentTest</span>
-                <span class="method-start">16089 ms</span>
+                <span class="method-start">16992 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">sendLetterTest</span>
-                <span class="method-start">17762 ms</span>
+                <span class="method-start">19014 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">isLetterSent</span>
-                <span class="method-start">20974 ms</span>
+                <span class="method-start">22455 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">23726 ms</span>
+                <span class="method-start">25016 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-class before">
                 <span class="method-name">setUp(firefox)</span>
-                <span class="method-start">27257 ms</span>
+                <span class="method-start">26897 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">testLogin</span>
-                <span class="method-start">32255 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">createLetter(formal)</span>
-                <span class="method-start">40298 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">draftTest</span>
-                <span class="method-start">40299 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">contentTest</span>
-                <span class="method-start">50586 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">sendLetterTest</span>
-                <span class="method-start">53748 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">isLetterSent</span>
-                <span class="method-start">61020 ms</span>
+                <span class="method-start">31934 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">tearDown</span>
-                <span class="method-start">66496 ms</span>
+                <span class="method-start">40571 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

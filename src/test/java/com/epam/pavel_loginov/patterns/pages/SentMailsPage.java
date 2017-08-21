@@ -5,7 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class SentMailsPage extends Page{
+public class SentMailsPage extends BasePage{
 	public SentMailsPage(WebDriver driver){
 		super(driver);
 		this.getSentLink().click();

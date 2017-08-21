@@ -7,6 +7,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+/**
+ * @author Pavel_Loginov2<br>
+ * CreatedDate - 2017 august 18<br>
+ * Description: Class-decorator,  which decorates WebDriver functional
+ */
+
 public class Decorator implements WebDriver {
 	protected WebDriver instance;
 
@@ -84,10 +90,17 @@ public class Decorator implements WebDriver {
 		return instance;
 	}
 
-	public boolean isElementExist(String xpath) {
+	/**
+	 * CreatedDate - 2017 august 18<br>
+	 * Description: Method, which determines if an element is present on the page<br>
+	 * @param elementXpath xpath of element which you want to check
+	 * @return true/false
+	 * */
+	
+	public boolean isElementPresent(String elementXpath) {
 
 		try {
-			instance.findElement(By.xpath(xpath));
+			instance.findElement(By.xpath(elementXpath));
 			return true;
 		} catch (Exception e) {
 			return false;

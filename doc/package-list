@@ -1,0 +1,8 @@
+com.epam.pavel_loginov.patterns.business_objects
+com.epam.pavel_loginov.patterns.pages
+com.epam.pavel_loginov.patterns.patterns.builder
+com.epam.pavel_loginov.patterns.patterns.decorator
+com.epam.pavel_loginov.patterns.patterns.factory_method
+com.epam.pavel_loginov.patterns.patterns.singleton
+com.epam.pavel_loginov.patterns.tests
+com.epam.pavel_loginov.patterns.tools

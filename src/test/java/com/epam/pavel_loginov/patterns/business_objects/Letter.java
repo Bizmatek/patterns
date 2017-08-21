@@ -1,5 +1,10 @@
 package com.epam.pavel_loginov.patterns.business_objects;
 
+/**
+ * @author Pavel_Loginov2<br>
+ * CreatedDate - 2017 august 18<br>
+ * */
+
 public class Letter {
 
 	private String address;

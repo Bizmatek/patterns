@@ -1,5 +1,11 @@
 package com.epam.pavel_loginov.patterns.business_objects;
 
+/**
+ * @author Pavel_Loginov2<br>
+ * CreatedDate - 2017 august 18<br>
+ * 
+ * */
+
 import java.util.Properties;
 
 import com.epam.pavel_loginov.patterns.tools.FileReader;

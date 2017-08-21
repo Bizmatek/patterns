@@ -4,6 +4,12 @@ import java.util.Date;
 import com.epam.pavel_loginov.patterns.business_objects.Letter;
 import com.epam.pavel_loginov.patterns.tools.FileReader;
 
+/**
+ * @author Pavel_Loginov2<br>
+ * CreatedDate - 2017 august 18<br>
+ * Description: Class which builds informal letter
+ */
+
 public class InformalLetterBuilder extends LetterBuilder {
 	public InformalLetterBuilder() {
 

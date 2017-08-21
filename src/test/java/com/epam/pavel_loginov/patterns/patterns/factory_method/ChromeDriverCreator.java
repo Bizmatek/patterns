@@ -7,6 +7,11 @@ import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
+	
+	/** @author Pavel_Loginov2<br>
+	* 	CreatedDate - 2017 august 18<br>
+	* 	Description: Class for creation ChromeDriver
+	*/
 
 public class ChromeDriverCreator extends WebDriverCreator {
 

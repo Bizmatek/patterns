@@ -13,7 +13,7 @@ import com.epam.pavel_loginov.patterns.business_objects.Letter;
 import com.epam.pavel_loginov.patterns.pages.DraftPage;
 import com.epam.pavel_loginov.patterns.pages.LetterPage;
 import com.epam.pavel_loginov.patterns.pages.LoginPage;
-import com.epam.pavel_loginov.patterns.pages.Page;
+import com.epam.pavel_loginov.patterns.pages.BasePage;
 import com.epam.pavel_loginov.patterns.pages.SentMailsPage;
 import com.epam.pavel_loginov.patterns.patterns.builder.FormalLetterBuilder;
 import com.epam.pavel_loginov.patterns.patterns.builder.InformalLetterBuilder;
@@ -21,6 +21,7 @@ import com.epam.pavel_loginov.patterns.patterns.builder.LetterBuilder;
 import com.epam.pavel_loginov.patterns.patterns.decorator.Decorator;
 import com.epam.pavel_loginov.patterns.patterns.factory_method.DriverManager;
 import com.epam.pavel_loginov.patterns.patterns.factory_method.WebDriverCreator;
+import com.epam.pavel_loginov.patterns.patterns.singleton.SingletonDriver;
 
 public class TestClass {
 
@@ -30,7 +31,7 @@ public class TestClass {
 	private DraftPage draftPage;
 	private LetterPage letterPage;
 	private SentMailsPage sentPage;
-	private Page currentPage;
+	private BasePage currentPage;
 
 	Letter letter;
 
@@ -48,8 +49,8 @@ public class TestClass {
 
 		WebElement draftLink = currentPage.getDraftLink();
 		draftLink.click();
-		Page.logoutAndExit();
-		driver = null;
+		BasePage.logout();
+		SingletonDriver.quit(driver);
 	}
 
 	@Test
@@ -61,7 +62,7 @@ public class TestClass {
 		loginPage.login();
 
 		WebElement userMenuBtn = (new WebDriverWait(driver, 10))
-				.until(ExpectedConditions.visibilityOfElementLocated(Page.USER_MENU_BTN_LOCATOR));
+				.until(ExpectedConditions.visibilityOfElementLocated(BasePage.USER_MENU_BTN_LOCATOR));
 
 		Assert.assertEquals(userMenuBtn.getText(), "test_student2017@mail.ru");
 	}
@@ -72,7 +73,7 @@ public class TestClass {
 		draftPage = new DraftPage(driver);
 		currentPage = draftPage;
 
-		draftPage.composeLetter(letter.getAddress(), letter.getSubject(), letter.getText());
+		draftPage.composeLetter(letter);
 
 		draftPage.saveDraft();
 
@@ -88,14 +89,14 @@ public class TestClass {
 		letterPage = new LetterPage(driver);
 		currentPage = letterPage;
 		letterPage.getDraftLink().click();
-		letterPage.goIntoLetter(letter.getSubject());
-		Assert.assertEquals(letterPage.getBodyText(letter.getText()), letter.getText());
+		letterPage.openLetter(letter.getSubject());
+		Assert.assertEquals(letterPage.getPageText(), letter.getText());
 	}
 
 	@Test(dependsOnMethods = "contentTest", groups = "actionsWithLetters")
 	public void sendLetterTest() {
 		letterPage.getDraftLink().click();
-		letterPage.goIntoLetter(letter.getSubject());
+		letterPage.openLetter(letter.getSubject());
 		letterPage.sendLetter();
 		Assert.assertTrue(letterPage.isLetterSent());
 	}

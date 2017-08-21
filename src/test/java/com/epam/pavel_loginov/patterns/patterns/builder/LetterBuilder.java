@@ -5,6 +5,12 @@ import java.util.Properties;
 
 import com.epam.pavel_loginov.patterns.business_objects.Letter;
 
+/**
+ * @author Pavel_Loginov2<br>
+ * CreatedDate - 2017 august 18<br>
+ * Description: Abstract class for letters building.
+ */
+
 public abstract class LetterBuilder {
 	protected Letter letter;
 
@@ -15,13 +21,13 @@ public abstract class LetterBuilder {
 		return this.letter;
 	}
 
-	public abstract void createLetter();
+	protected abstract void createLetter();
 
-	public abstract void buildAddress();
+	protected abstract void buildAddress();
 
-	public abstract void buildSubject();
+	protected abstract void buildSubject();
 
-	public abstract void buildText();
+	protected abstract void buildText();
 
 	public abstract void build();
 

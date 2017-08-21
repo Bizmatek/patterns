@@ -8,7 +8,6 @@
           <include name="isLetterSent"/>
           <include name="draftTest"/>
           <include name="contentTest"/>
-          <include name="getLog"/>
           <include name="setUp"/>
           <include name="sendLetterTest"/>
           <include name="testLogin"/>

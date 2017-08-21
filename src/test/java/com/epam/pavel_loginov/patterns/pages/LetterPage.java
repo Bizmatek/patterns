@@ -5,38 +5,58 @@ import java.util.Formatter;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class LetterPage extends Page {
+/**
+ * @author Pavel_Loginov2<br>
+ * CreatedDate - 2017 august 18<br>
+ */
+
+public class LetterPage extends BasePage {
 
 	public LetterPage(WebDriver driver) {
 		super(driver);
 	}
 
-	public final By bodyFrameLocator = By.xpath("//iframe[contains(@id, 'toolkit')]");
-	public final By sendButtonLocator = By.xpath("//div[@data-name = 'send']");
+	@FindBy(xpath = "//iframe[contains(@id, 'toolkit')]")
+	public static WebElement bodyFrame;
 
-	public void goIntoLetter(String subj) {
+	public static final By sendButtonLocator = By.xpath("//div[@data-name = 'send']");
+
+	/**
+	 * Description - Method opening a letter, which satisfy by search
+	 * criteria<br>
+	 * CreatedDate - 2017 august 18<br>
+	 * 
+	 * @param subj
+	 *            theme of the letter which necessary to open
+	 */
+
+	public void openLetter(String subj) {
 		Formatter formatter = new Formatter();
-		formatter.format("(//a[@data-subject = '%s'])", subj); ////[1]
+		formatter.format("(//a[@data-subject = '%s'])", subj);
 		WebElement letterCaption = driver.findElement(By.xpath(formatter.toString()));
 		formatter.close();
 		letterCaption.click();
 	}
 
-	public String getBodyText(String bodyText) {
-
-		WebElement frame = driver.findElement(bodyFrameLocator);
-		driver.switchTo().frame(frame);
-		Formatter formatter = new Formatter();
-		formatter.format("//*[contains(text(), '%s')]", bodyText);
-		WebElement body = driver.findElement(By.xpath(formatter.toString()));
-		formatter.close();
+	
+	/**
+	 * Description - Method, which returns text of opened letter<br>
+	 * CreatedDate - 2017 august 18<br>
+	 * @return letterText text of the letter<br>
+	 * */
+	
+	public String getPageText() {
+		driver.switchTo().frame(bodyFrame);
+		WebElement body = driver.findElement(By.xpath("html/body/div/div/div"));
 		String letterText = body.getText();
 		driver.switchTo().defaultContent();
 		return letterText;
 	}
+	
 
 	public void sendLetter() {
 		WebElement sendButton = (new WebDriverWait(driver, 10))
@@ -44,6 +64,12 @@ public class LetterPage extends Page {
 		sendButton.click();
 	}
 
+	/**
+	 * Description - Method, which check that letter is sent<br>
+	 * CreatedDate - 2017 august 18<br>
+	 * @return Are there any messages about sending a message? (boolean)
+	 * */
+	
 	public boolean isLetterSent() {
 		WebElement sentMessageTitle = (new WebDriverWait(driver, 10)).until(
 				ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class = 'message-sent__title']")));
